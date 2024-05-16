@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+// Function to check if a matrix is a sparse matrix
+int isSparseMatrix(int rows, int cols, int matrix[rows][cols]) {
+    int zeroCount = 0;
+    int totalElements = rows * cols;
+
+    // Count the number of zero elements in the matrix
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (matrix[i][j] == 0) {
+                zeroCount++;
+            }
+        }
+    }
+
+    // Check if more than half of the elements are zero
+    if (zeroCount > totalElements / 2) {
+        return 1; // Sparse matrix
+    } else {
+        return 0; // Not a sparse matrix
+    }
+}
+
+int main() {
+    // Variables to store the number of rows, columns, and matrix elements
+    int rows, cols;
+
+    // Prompt user for input
+  //  printf("Enter the number of rows and columns of the matrix: ");
+    scanf("%d %d", &rows, &cols);
+
+    // Check for valid input
+    if (rows <= 0 || cols <= 0) {
+        printf("Invalid input\n");
+        return 1;
+    }
+
+    // Variable to store the matrix
+    int matrix[rows][cols];
+
+    // Prompt user for matrix elements
+  //  printf("Enter the matrix elements:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    // Check if the matrix is a sparse matrix and display the result
+    if (isSparseMatrix(rows, cols, matrix)) {
+        printf("Sparse Matrix\n");
+    } else {
+        printf("Not a Sparse Matrix\n");
+    }
+
+    return 0;
+}
