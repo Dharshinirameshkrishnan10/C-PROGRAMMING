@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+
+int swapDigits(int num, int pos1, int pos2) {
+    int reversedNum = 0;
+    int position = 0;
+    
+    while (num > 0) {
+        int digit = num % 10;
+        position++;
+        
+        if (position == pos1) {
+            reversedNum += digit * pow(10, pos2 - 1);
+        } else if (position == pos2) {
+            reversedNum += digit * pow(10, pos1 - 1);
+        } else {
+            reversedNum += digit * pow(10, position - 1);
+        }
+        
+        num /= 10;
+    }
+    
+    return reversedNum;
+}
+
+int main() {
+    int num, pos1, pos2;
+    
+    // Input
+    scanf("%d", &num);
+    scanf("%d", &pos1);
+    scanf("%d", &pos2);
+    
+    int result = swapDigits(num, pos1, pos2);
+    
+    // Output
+    printf("%d\n", result);
+    
+    return 0;
+}
