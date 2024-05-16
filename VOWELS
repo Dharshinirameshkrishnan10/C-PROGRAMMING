@@ -1,0 +1,32 @@
+[9:47 pm, 15/05/2024] Dona: #include <stdio.h>
+
+int main()
+{
+    char i;
+    scanf("%c",&i);
+    if(i=='a'||i=='e'||i=='i'||i=='o'||i=='u')
+    {
+      printf("vowel");
+    }
+    else
+    {
+        printf("consonant");
+    }
+
+
+    return 0;
+}
+[9:47 pm, 15/05/2024] Dona: vowel or not
+[9:48 pm, 15/05/2024] Dona: #include <stdio.h>
+
+int main()
+{
+  char str1;
+   scanf("%s",&str1);
+   for(char i='z';i>=str1;i--)
+   {
+       printf("%c",i);
+   }
+
+    return 0;
+}
