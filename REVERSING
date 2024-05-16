@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+  char str1;
+   scanf("%s",&str1);
+   for(char i='z';i>=str1;i--)
+   {
+       printf("%c",i);
+   }
+
+    return 0;
+}
