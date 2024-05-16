@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n,count=0;
+    char ch[10];
+    scanf("%s",ch);
+    for(int i=0;ch[i];i++)
+    {
+        count++;
+    }
+    printf("%d",count);
+    
+    for(int i=count;i<count;i--)
+    {
+        printf("%c",ch[i]);
+    }
+}
