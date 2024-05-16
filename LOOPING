@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    // Input an integer
+    scanf("%d", &num);
+
+    // Check if the number is a power of 2
+    if ((num > 0) && ((num & (num - 1)) == 0)) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
