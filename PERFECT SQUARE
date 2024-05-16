@@ -1,0 +1,18 @@
+ #include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    double sqrt_num = sqrt(num);
+    int int_sqrt = (int)sqrt_num;
+
+    if (int_sqrt * int_sqrt == num) {
+        printf("Perfect Square\n");
+    } else {
+        printf("Not\n");
+    }
+
+    return 0;
+}
